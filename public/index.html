@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ApeX Music Bot - Open-source Discord music bot with high-quality audio, advanced filters, and playlist management.">
+    <meta name="keywords" content="Discord bot, music bot, ApeX, Discord music, open source">
+    <meta property="og:title" content="ApeX Music Bot">
+    <meta property="og:description" content="High-quality Discord music bot with advanced features. Open-source by ApeX Development.">
+    <meta property="og:type" content="website">
+    <title>ApeX Music Bot - Open Source Discord Music</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🎵</span>
+                <span class="logo-text">ApeX</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#setup">Setup</a>
+                <a href="#commands">Commands</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://discord.gg/eSucYuzF" target="_blank">Emojis</a>
+                <a href="https://github.com/teamapexofc/ApeX-Music" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="gradient-text">ApeX</span> Music Bot
+            </h1>
+            <p class="hero-subtitle">Open-Source Discord Music Bot</p>
+            <p class="hero-description">
+                High-quality audio playback, advanced filters, and seamless playlist management.
+                <br>Built by <strong>ApeX Development</strong> for the community.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://discord.gg/6QwS5BQx" class="btn btn-primary" target="_blank">
+                    <span>Join Support Server</span>
+                </a>
+                <a href="https://discord.gg/eSucYuzF" class="btn btn-secondary" target="_blank">
+                    <span>Get Emojis 😊</span>
+                </a>
+                <a href="https://github.com/teamapexofc/ApeX-Music" class="btn btn-outline" target="_blank">
+                    <span>View on GitHub</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">🌐</div>
+                <div class="stat-value" id="serverCount">Loading...</div>
+                <div class="stat-label">Servers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-value" id="userCount">Loading...</div>
+                <div class="stat-label">Users</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-value" id="commandCount">47</div>
+                <div class="stat-label">Commands</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎶</div>
+                <div class="stat-value" id="playerCount">Loading...</div>
+                <div class="stat-label">Active Players</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <p class="section-subtitle">Everything you need for an amazing music experience</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h3>High-Quality Audio</h3>
+                    <p>Crystal-clear music streaming with Lavalink integration for the best audio experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎛️</div>
+                    <h3>Advanced Filters</h3>
+                    <p>8D, Bassboost, Nightcore, Karaoke, and more audio filters to customize your sound.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Playlist Management</h3>
+                    <p>Create, save, and manage custom playlists with ease. Your music, your way.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Queue Control</h3>
+                    <p>Loop, shuffle, skip, and manage your queue with intuitive controls and buttons.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Customizable Setup</h3>
+                    <p>Persistent music channels, custom prefixes, and configurable settings per server.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Slash Commands</h3>
+                    <p>Modern Discord slash commands alongside traditional prefix commands for flexibility.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔊</div>
+                    <h3>Volume Control</h3>
+                    <p>Precise volume adjustment and seek functionality for complete playback control.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <h3>MongoDB Storage</h3>
+                    <p>Reliable database storage for playlists, settings, and user preferences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About ApeX Music Bot</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <h3>🎵 Open Source & Free</h3>
+                    <ul>
+                        <li>✅ Completely open-source codebase on GitHub</li>
+                        <li>✅ Perfect for learning bot development</li>
+                        <li>✅ Community-driven improvements</li>
+                        <li>✅ Free to use and self-host</li>
+                        <li>✅ Active development and updates</li>
+                    </ul>
+                </div>
+                <div class="creator-info">
+                    <p>
+                        <strong>Created by ApeX Development Team</strong><br>
+                        ApeX is an open-source project dedicated to providing a high-quality Discord music bot 
+                        experience while helping developers learn and grow. We believe in the power of open source 
+                        and community collaboration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="setup" class="setup-section">
+        <div class="container">
+            <h2 class="section-title">Setup Guide</h2>
+            <p class="section-subtitle">Get started with ApeX in minutes</p>
+            
+            <div class="setup-content">
+                <div class="setup-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>📋 Prerequisites</h3>
+                        <ul class="setup-list">
+                            <li><strong>Node.js v16+</strong> - Download from <a href="https://nodejs.org" target="_blank">nodejs.org</a></li>
+                            <li><strong>MongoDB</strong> - Get a free database at <a href="https://mongodb.com/atlas" target="_blank">MongoDB Atlas</a></li>
+                            <li><strong>Discord Bot Token</strong> - Create one at <a href="https://discord.com/developers/applications" target="_blank">Discord Developer Portal</a></li>
+                            <li><strong>Lavalink Server</strong> - Use a public server or host your own</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="setup-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>⬇️ Installation</h3>
+                        <div class="code-block">
+                            <code>git clone https://github.com/teamapexofc/ApeX-Music.git<br>
+cd ApeX-Music<br>
+npm install</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setup-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>⚙️ Configuration</h3>
+                        <p>Edit <code>config/vars.js</code> with your credentials:</p>
+                        <div class="code-block">
+                            <code>token: "YOUR_BOT_TOKEN"<br>
+mongoURL: "mongodb+srv://username:password@cluster.mongodb.net"<br>
+owners: ["YOUR_USER_ID"]<br>
+nodes: [{<br>
+&nbsp;&nbsp;name: "ApeX",<br>
+&nbsp;&nbsp;url: "your.lavalink.server:443",<br>
+&nbsp;&nbsp;auth: "youshallnotpass",<br>
+&nbsp;&nbsp;secure: true<br>
+}]</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="setup-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>🚀 Running the Bot</h3>
+                        <div class="code-block">
+                            <code>npm start</code>
+                        </div>
+                        <p class="setup-note">Your bot should now be online! Invite it to your server using the OAuth2 URL from Discord Developer Portal.</p>
+                    </div>
+                </div>
+
+                <div class="setup-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>🎵 Initial Setup in Discord</h3>
+                        <ul class="setup-list">
+                            <li>Use <code>!setup</code> to create a persistent music channel</li>
+                            <li>Use <code>!set-prefix [prefix]</code> to change the command prefix</li>
+                            <li>Use <code>!247</code> to enable 24/7 mode (bot stays in voice channel)</li>
+                            <li>Use <code>!help</code> to see all available commands</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="troubleshooting">
+                <h3>🔧 Troubleshooting</h3>
+                <div class="troubleshooting-grid">
+                    <div class="trouble-card">
+                        <h4>Bot won't start?</h4>
+                        <ul>
+                            <li>Check your bot token is correct</li>
+                            <li>Ensure Node.js version is 16+</li>
+                            <li>Verify MongoDB connection string</li>
+                        </ul>
+                    </div>
+                    <div class="trouble-card">
+                        <h4>No audio playing?</h4>
+                        <ul>
+                            <li>Verify Lavalink server is running</li>
+                            <li>Check Lavalink credentials in config</li>
+                            <li>Ensure bot has proper voice permissions</li>
+                        </ul>
+                    </div>
+                    <div class="trouble-card">
+                        <h4>Commands not working?</h4>
+                        <ul>
+                            <li>Check bot has necessary permissions</li>
+                            <li>Verify prefix with <code>!set-prefix</code></li>
+                            <li>Make sure bot is in a voice channel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="setup-footer">
+                <p>Need more help? Join our <a href="https://discord.gg/6QwS5BQx" target="_blank">Support Server</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="commands" class="commands-section">
+        <div class="container">
+            <h2 class="section-title">All Commands</h2>
+            <p class="section-subtitle">Complete list of available commands - Default prefix: <code class="prefix-badge">!</code></p>
+            
+            <div class="commands-grid">
+                <div class="command-category">
+                    <div class="category-header">
+                        <span class="category-icon">🎵</span>
+                        <h3>Music Commands</h3>
+                    </div>
+                    <div class="command-list">
+                        <div class="cmd-item"><code>play</code> - Play a song</div>
+                        <div class="cmd-item"><code>pause</code> - Pause playback</div>
+                        <div class="cmd-item"><code>resume</code> - Resume playback</div>
+                        <div class="cmd-item"><code>skip</code> - Skip current song</div>
+                        <div class="cmd-item"><code>stop</code> - Stop playback</div>
+                        <div class="cmd-item"><code>queue</code> - View queue</div>
+                        <div class="cmd-item"><code>loop</code> - Toggle loop mode</div>
+                        <div class="cmd-item"><code>volume</code> - Adjust volume</div>
+                        <div class="cmd-item"><code>shuffle</code> - Shuffle queue</div>
+                        <div class="cmd-item"><code>previous</code> - Play previous song</div>
+                        <div class="cmd-item"><code>join</code> - Join voice channel</div>
+                        <div class="cmd-item"><code>leave</code> - Leave voice channel</div>
+                        <div class="cmd-item"><code>seek</code> - Seek to position</div>
+                        <div class="cmd-item"><code>clearqueue</code> - Clear the queue</div>
+                    </div>
+                </div>
+                
+                <div class="command-category">
+                    <div class="category-header">
+                        <span class="category-icon">🎛️</span>
+                        <h3>Filter Commands</h3>
+                    </div>
+                    <div class="command-list">
+                        <div class="cmd-item"><code>8d</code> - Toggle 8D audio</div>
+                        <div class="cmd-item"><code>bass</code> - Bassboost filter</div>
+                        <div class="cmd-item"><code>nightcore</code> - Nightcore effect</div>
+                        <div class="cmd-item"><code>karaoke</code> - Karaoke mode</div>
+                        <div class="cmd-item"><code>soft</code> - Soft filter</div>
+                        <div class="cmd-item"><code>speed</code> - Change playback speed</div>
+                        <div class="cmd-item"><code>pop</code> - Pop filter</div>
+                        <div class="cmd-item"><code>electronic</code> - Electronic filter</div>
+                        <div class="cmd-item"><code>earrape</code> - Earrape effect</div>
+                        <div class="cmd-item"><code>clearfilters</code> - Remove all filters</div>
+                    </div>
+                </div>
+                
+                <div class="command-category">
+                    <div class="category-header">
+                        <span class="category-icon">📋</span>
+                        <h3>Playlist Commands</h3>
+                    </div>
+                    <div class="command-list">
+                        <div class="cmd-item"><code>playlist-create</code> - Create playlist</div>
+                        <div class="cmd-item"><code>playlist-delete</code> - Delete playlist</div>
+                        <div class="cmd-item"><code>playlist-load</code> - Load playlist</div>
+                        <div class="cmd-item"><code>playlist-show</code> - Show playlists</div>
+                        <div class="cmd-item"><code>add-current</code> - Add current song</div>
+                    </div>
+                </div>
+                
+                <div class="command-category">
+                    <div class="category-header">
+                        <span class="category-icon">⚙️</span>
+                        <h3>Settings Commands</h3>
+                    </div>
+                    <div class="command-list">
+                        <div class="cmd-item"><code>setup</code> - Setup music channel</div>
+                        <div class="cmd-item"><code>set-prefix</code> - Change prefix</div>
+                        <div class="cmd-item"><code>247</code> - Toggle 24/7 mode</div>
+                        <div class="cmd-item"><code>autoplay</code> - Toggle autoplay</div>
+                        <div class="cmd-item"><code>ignore</code> - Ignore channel</div>
+                    </div>
+                </div>
+
+                <div class="command-category">
+                    <div class="category-header">
+                        <span class="category-icon">ℹ️</span>
+                        <h3>Info Commands</h3>
+                    </div>
+                    <div class="command-list">
+                        <div class="cmd-item"><code>help</code> - Show help menu</div>
+                        <div class="cmd-item"><code>about</code> - About the bot</div>
+                        <div class="cmd-item"><code>ping</code> - Check bot latency</div>
+                        <div class="cmd-item"><code>stats</code> - Bot statistics</div>
+                        <div class="cmd-item"><code>invite</code> - Invite the bot</div>
+                        <div class="cmd-item"><code>support</code> - Support server</div>
+                        <div class="cmd-item"><code>profile</code> - User profile</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="commands-footer">
+                <p>Use <code>!help [command]</code> for detailed information about any command</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Common questions about ApeX Music Bot</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>🤔 What is ApeX Music Bot?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ApeX is a completely free and open-source Discord music bot with high-quality audio, advanced filters, and playlist management. It's perfect for anyone who wants a feature-rich music bot for their server.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>💰 Is ApeX completely free?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! ApeX is 100% free and open-source. You can self-host it, modify it, and learn from it. However, you'll need your own hosting, Discord bot token, MongoDB database, and Lavalink server.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>🎵 What music sources does ApeX support?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>ApeX supports YouTube, SoundCloud, Spotify (links only), and many other sources through Lavalink. The quality depends on your Lavalink server configuration.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>🔧 Can I customize ApeX for my server?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! ApeX is open-source, so you can modify commands, add features, change colors, and customize everything. Check our GitHub for contribution guidelines.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>😊 Where can I get custom emojis for my bot?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Join our <a href="https://discord.gg/eSucYuzF" target="_blank">Emoji Server</a> to get all the custom emojis used by ApeX. Perfect for customizing your setup!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>🆘 I need help! Where can I get support?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Join our <a href="https://discord.gg/6QwS5BQx" target="_blank">Support Server</a> for help with setup, troubleshooting, and general questions. Our community is here to help!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>📝 Can I contribute to ApeX?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We welcome contributions. Fork the repository, make your changes, and submit a pull request. Check our <a href="https://github.com/teamapexofc/ApeX-Music" target="_blank">GitHub</a> for guidelines.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>⚡ How do I host ApeX 24/7?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can host ApeX on platforms like Replit (with Replit Always On), VPS providers, or dedicated servers. Make sure your hosting solution supports Node.js and has enough resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>🎵 ApeX Music Bot</h3>
+                    <p>Open-source Discord music bot by ApeX Development</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="https://github.com/teamapexofc/ApeX-Music" target="_blank">GitHub Repository</a>
+                        <a href="https://discord.js.org" target="_blank">Discord.js Docs</a>
+                        <a href="#setup">Setup Guide</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="https://discord.gg/6QwS5BQx" target="_blank">Support Server</a>
+                        <a href="https://discord.gg/eSucYuzF" target="_blank">Emoji Server</a>
+                        <a href="https://github.com/teamapexofc/ApeX-Music/issues" target="_blank">Report Issues</a>
+                        <a href="https://github.com/teamapexofc/ApeX-Music#contributing" target="_blank">Contribute</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with 💘 by ApeX Development Team • Open Source • MIT License</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
