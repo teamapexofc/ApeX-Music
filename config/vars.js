@@ -9,8 +9,8 @@ const vars = {
     },
     nodes: [{
         name: "ApeX",
-        url: "lava.mimibot.app:5017",
-        auth: "AliveMimi",
+        url: "lava.mimibot.app:5046",
+        auth: "youshallnotpass",
         secure: false
     }],
     serverLink: "https://discord.gg/mw6KwT5EGz",
